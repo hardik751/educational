@@ -1,0 +1,78 @@
+.welcome-page {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #007bff, #9c9fac);
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  background-image{
+    height: 200%; /* Set the height of the container to 100% of the viewport height */
+     /* Ensure the image takes the full width of the container */
+    overflow: hidden;
+  } 
+  .animation-container {
+    text-align: center;
+    color: hsl(263, 46%, 45%);
+    opacity: 0;
+    font-size: 30px;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .animated-text {
+    opacity: 100;
+    animation: slideIn 2s ease-in-out forwards;
+    margin-right: 5px;
+  }
+  
+  @keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  
+
+
+  /* welcome.css */
+  @media screen and (max-width: 360px) and (max-height: 580px)  {
+    .background-image {
+      width: 100%;
+      height: 50%; /* Adjust the height of the image container */
+      position: absolute;
+      top: 0;
+      
+      left: 0;
+      margin-top: 40%; /* Center the image vertically */
+    }
+  
+    .h1-1 {
+      /* Add styles for h2-1 to position it at the top */
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 10px; /* Adjust as needed */
+      z-index: 1; /* Ensure h2-1 appears above the image */
+    }
+  
+    .animation-container {
+      text-align: center;
+      color: #222222;
+      opacity: 0;
+      font-size: 20px;
+      margin-top: 120%; /* Adjust the margin-top to position the text */
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+  }
+  
